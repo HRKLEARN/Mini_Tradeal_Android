@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/recycleviewshape"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="142dp"
+        android:background="@drawable/item_image_shape"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/productImg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="3dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:shapeAppearanceOverlay="@style/roundImageView" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="145dp"
+            android:gravity="start|top"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="236dp"
+                android:layout_height="147dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="142dp"
+                        android:layout_height="84dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/productTitle"
+                            android:layout_width="140dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+
+                            android:text="Product Title" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="rating" />
+
+                            <RatingBar
+                                android:id="@+id/RatingBar"
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:numStars="5"
+                                android:rating="3"
+                                android:stepSize="0.5"
+                                android:theme="@style/RatingBar" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/typeProduct"
+                            android:layout_width="140dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="Type:" />
+
+                        <TextView
+                            android:id="@+id/authorname"
+                            android:layout_width="140dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+
+                            android:text="Owner:" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="end|top"
+                        android:orientation="horizontal"
+                        android:paddingEnd="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/PrixCookie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:paddingEnd="5dp"
+                            android:paddingRight="5dp"
+                            android:text="prix" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="29dp"
+                            android:background="@drawable/icon_cookie" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:hint="description :"
+
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@drawable/item_image_shape2"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_image_shape2"
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iconFavorite"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:adjustViewBounds="true"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/favoris"
+                app:shapeAppearanceOverlay="@style/roundIconView" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingStart="1dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="18dp"
+                android:paddingRight="18dp"
+                android:text="Ajout Favoris"
+
+                android:textColor="#9575CD"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/DateCreation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:gravity="left|center"
+            android:text="date of creation"
+
+            android:textColor="#515C6F" />
+
+        <TextView
+            android:id="@+id/Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|end"
+            android:text="Location,distance"
+            android:textColor="#515C6F" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tn.esprit.mini_tradeal_android.ui.activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="178dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="176dp"
+        android:contentDescription="@string/logo_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@mipmap/ic_launcher_tradeal" />
+
+    <Button
+        android:id="@+id/button_sign"
+        android:layout_width="302dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="160dp"
+        android:backgroundTint="#0CF2B4"
+        android:fontFamily="@font/asar"
+        android:text="@string/sign_in"
+        app:cornerRadius="38dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Logo" />
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="302dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="90dp"
+        android:fontFamily="@font/asar"
+        android:text="@string/register"
+        app:backgroundTint="#966BE8"
+        app:cornerRadius="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_sign"
+        app:layout_constraintVertical_bias="0.404" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

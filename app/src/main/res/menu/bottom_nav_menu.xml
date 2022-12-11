@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_round_home_24"
+        android:title="Home" />
+    <item
+        android:id="@+id/Groups"
+        android:icon="@drawable/ic_baseline_group_24"
+        android:title="Groups" />
+    <item
+        android:id="@+id/palaceHolder"
+        android:title="" />
+    <item
+        android:id="@+id/Favorite"
+        android:icon="@drawable/iconmonstr_favorite_1"
+        android:title="Favorite" />
+    <item
+        android:id="@+id/profil"
+        android:icon="@drawable/ic_round_person_24"
+        android:title="profil" />
+</menu>

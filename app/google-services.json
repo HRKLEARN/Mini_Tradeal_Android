@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "516657125160",
+    "project_id": "tradealminiprojet",
+    "storage_bucket": "tradealminiprojet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516657125160:android:093673f9af30b74b8ee21d",
+        "android_client_info": {
+          "package_name": "tn.esprit.mini_android_projet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516657125160-fdvbni4sbmj4ju2icfd0pmt2dgvcbpai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfDeFDgyTQW16oCk4bLITCRSwnLVPYla4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516657125160-fdvbni4sbmj4ju2icfd0pmt2dgvcbpai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516657125160:android:fcd12d566bc0c4018ee21d",
+        "android_client_info": {
+          "package_name": "tn.esprit.mini_tradeal_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516657125160-fdvbni4sbmj4ju2icfd0pmt2dgvcbpai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfDeFDgyTQW16oCk4bLITCRSwnLVPYla4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516657125160-fdvbni4sbmj4ju2icfd0pmt2dgvcbpai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

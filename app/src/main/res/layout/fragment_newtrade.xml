@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Describe Your Deal "
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:labelFor="@id/EdProductName"
+            android:text="Product Name :"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/EdProductName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:gravity="start"
+            android:hint="Product Name"
+            android:textColorHint="#78909C" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:labelFor="@id/EdProductDescription"
+            android:text="Description :"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/EdProductDescription"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="20dp"
+            android:autofillHints="Tell us more about your product!"
+            android:background="@color/white"
+            android:gravity="start"
+            android:hint="@string/LabelDescription"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textColor="@color/ColorTextPrimary"
+            android:textColorHint="@color/ColorTextSecondary" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edit_text_shape"
+
+            android:gravity="start"
+            android:hint="provide your adress :"
+            android:inputType="text"
+            android:paddingStart="5sp"
+            android:paddingLeft="5sp"
+            android:textAlignment="textStart" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end|center_vertical">
+
+            <EditText
+                android:layout_width="110dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginVertical="10dp"
+                android:autofillHints="your price"
+                android:background="@drawable/recycleviewshape"
+                android:hint="price"
+                android:inputType="number"
+                android:paddingLeft="20dp" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:contentDescription="cookies coins"
+                android:src="@drawable/icon_cookie" />
+        </LinearLayout>
+
+
+        <Spinner
+
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:fontFamily="@font/asar"
+                android:onClick="onRadioButtonClicked"
+                android:text="Goods"
+                android:textSize="19dp" />
+
+            <RadioButton
+                android:id="@+id/radio_services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="Services"
+                android:textSize="19dp" />
+        </RadioGroup>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/asar"
+            android:text="ADD YOUR TRADE"
+            android:textSize="19dp" />
+    </LinearLayout>
+
+
+</ScrollView>

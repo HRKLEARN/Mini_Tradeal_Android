@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tn.esprit.mini_tradeal_android.ui.activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="178dp"
+        android:layout_height="178dp"
+        android:contentDescription="Logo"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@mipmap/ic_launcher_tradeal" />
+
+
+    <Button
+        android:id="@+id/button_sign"
+        android:layout_width="302dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="159dp"
+        android:backgroundTint="#0CF2B4"
+        android:fontFamily="@font/asar"
+        android:text="@string/sign_in"
+        app:cornerRadius="38dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Logo"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp"
+        tools:targetApi="lollipop" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="396dp"
+        android:layout_height="233dp"
+        android:background="@drawable/shape"
+        android:gravity="center_horizontal|center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="302dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="40dp"
+            android:fadingEdge="vertical"
+            android:fontFamily="@font/asar"
+            android:text="@string/register"
+            app:backgroundTint="#966BE8"
+            app:cornerRadius="38dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
