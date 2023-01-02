@@ -1,4 +1,4 @@
-package tn.esprit.mini_tradeal_android.dao;
+package tn.esprit.mini_tradeal_android.service.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -8,7 +8,7 @@ import androidx.room.Update;
 
 import java.util.List;
 
-import tn.esprit.mini_tradeal_android.entity.User;
+import tn.esprit.mini_tradeal_android.models.User;
 
 @Dao
 public interface UserDao {

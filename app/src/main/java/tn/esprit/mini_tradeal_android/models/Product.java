@@ -1,48 +1,52 @@
-package tn.esprit.mini_tradeal_android.entity;
+package tn.esprit.mini_tradeal_android.models;
 
-import androidx.room.ColumnInfo;
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
-import java.util.Date;
-
-@Entity(tableName = "product_table")
+@Entity
 public class Product {
-	@PrimaryKey(autoGenerate = true)
-	private int uid;
-	@ColumnInfo(name = "product_name")
+	public static final Parcelable.Creator<Product> CREATOR = new Parcelable.Creator<Product>() {
+		@Override
+		public Product createFromParcel(Parcel in) {
+			return new Product(in);
+		}
+		
+		@Override
+		public Product[] newArray(int size) {
+			return new Product[size];
+		}
+	};
 	private String productName;
-	@ColumnInfo(name = "description")
 	private String description;
-	@ColumnInfo(name = "author")
 	private String author;
-	@ColumnInfo(name = "imgUrl")
 	private String imgUrl;
-	@ColumnInfo(name = "product_type")
 	private String productType;
-	@ColumnInfo(name = "location")
+	@PrimaryKey(autoGenerate = true)
+	private Long uid;
 	private String location;
-	@ColumnInfo(name = "date")
-	private Date date;
-	@ColumnInfo(name = "price")
+	private String category;
 	private int price;
-	@ColumnInfo(name = "distance")
 	private int distance;
-	@ColumnInfo(name = "rating")
 	private float rating;
-	@ColumnInfo(name = "drawableResource")
 	private int DrawableResource;
 	
 	public Product() {
 	}
 	
-	public Product(String productName, String description, String author, String imgUrl, String productType, String location, Date date, int price, int distance, float rating, int drawableResource) {
+	private String date;
+	
+	public Product(String productName, String description, String author, String imgUrl, String productType, String category, String location, String date, int price, int distance, float rating, int drawableResource) {
+		
 		this.productName = productName;
 		this.description = description;
 		this.author = author;
 		this.imgUrl = imgUrl;
 		this.productType = productType;
+		this.category = category;
 		this.location = location;
 		this.date = date;
 		this.price = price;
@@ -51,6 +55,19 @@ public class Product {
 		this.DrawableResource = drawableResource;
 	}
 	
+	protected Product(Parcel in) {
+		uid = in.readLong();
+		productName = in.readString();
+		description = in.readString();
+		productType = in.readString();
+		category = in.readString();
+		location = in.readString();
+		date = in.readString();
+		author = in.readString();
+		imgUrl = in.readString();
+		price = in.readInt();
+		rating = in.readInt();
+	}
 	
 	@Ignore
 	public Product(int drawableResource) {
@@ -58,26 +75,27 @@ public class Product {
 	}
 	
 	
-	public Product(int uid, String productName, String description, String author, String imgUrl, String productType, String location, Date date, int price, int distance, float rating, int drawableResource) {
+	public Product(Long uid, String productName, String description, String author, String imgUrl, String productType, String category, String location, String date, int price, int distance, float rating, int drawableResource) {
 		this.uid = uid;
 		this.productName = productName;
 		this.description = description;
 		this.author = author;
 		this.imgUrl = imgUrl;
 		this.productType = productType;
+		this.category = category;
 		this.location = location;
 		this.date = date;
 		this.price = price;
 		this.distance = distance;
 		this.rating = rating;
-		this.DrawableResource = drawableResource;
+		DrawableResource = drawableResource;
 	}
 	
-	public int getUid() {
+	public Long getUid() {
 		return uid;
 	}
 	
-	public void setUid(int uid) {
+	public void setUid(Long uid) {
 		this.uid = uid;
 	}
 	
@@ -129,11 +147,11 @@ public class Product {
 		this.location = location;
 	}
 	
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
 	
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	
@@ -167,5 +185,13 @@ public class Product {
 	
 	public void setDrawableResource(int drawableResource) {
 		DrawableResource = drawableResource;
+	}
+	
+	public String getCategory() {
+		return category;
+	}
+	
+	public void setCategory(String category) {
+		this.category = category;
 	}
 }

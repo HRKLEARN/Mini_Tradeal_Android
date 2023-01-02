@@ -1,4 +1,4 @@
-package tn.esprit.mini_tradeal_android.entity;
+package tn.esprit.mini_tradeal_android.models;
 
 public class OnBoardingItem {
 	

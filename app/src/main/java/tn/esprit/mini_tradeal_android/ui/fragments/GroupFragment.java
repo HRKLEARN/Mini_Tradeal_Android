@@ -6,8 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import tn.esprit.mini_tradeal_android.R;
+import tn.esprit.mini_tradeal_android.ui.adapters.GroupAdapter;
+import tn.esprit.mini_tradeal_android.models.Group;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +31,9 @@ public class GroupFragment extends Fragment {
 	// TODO: Rename and change types of parameters
 	private String mParam1;
 	private String mParam2;
+	private List<Group> mdata;
+	private GroupAdapter groupAdapter;
+	private RecyclerView recyclerView;
 	
 	public GroupFragment() {
 		// Required empty public constructor
@@ -60,6 +70,25 @@ public class GroupFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	                         Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
-		return inflater.inflate(R.layout.fragment_group, container, false);
+		View view = inflater.inflate(R.layout.fragment_group, container, false);
+		// Add the following lines to create RecyclerView
+		recyclerView = view.findViewById(R.id.rvGroups);
+		recyclerView.setHasFixedSize(true);
+		recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+		initmDataGroup();
+		groupAdapter = new GroupAdapter(mdata);
+		recyclerView.setAdapter(groupAdapter);
+		return view;
+		
+	}
+	
+	private void initmDataGroup() {
+		mdata = new ArrayList<>();
+		mdata.add(new Group(1, "GoldenGroup", "Haitham", "Music"));
+		mdata.add(new Group(2, "GoldenGroup", "Haitham", "Music"));
+		mdata.add(new Group(3, "GoldenGroup", "Haitham", "Music"));
+		mdata.add(new Group(4, "GoldenGroup", "Haitham", "Music"));
+		mdata.add(new Group(5, "GoldenGroup", "Haitham", "Music"));
+		
 	}
 }

@@ -3,6 +3,7 @@ package tn.esprit.mini_tradeal_android.ui.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -10,9 +11,13 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -56,6 +61,7 @@ public class navigationActivity extends AppCompatActivity implements NavigationV
 	private DrawerLayout drawerLayout;
 	private ActionBarDrawerToggle toggle;
 	private NavigationView navigationView;
+	private GroupFragment fragment;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +73,17 @@ public class navigationActivity extends AppCompatActivity implements NavigationV
 		bottomNavigation.setBackground(null);
 		bottomNavigation.setOnNavigationItemSelectedListener(navListener);
 		bottomNavigation.getMenu().getItem(2).setEnabled(false);
+		FloatingActionButton fab = findViewById(R.id.fab);
+		/*fab.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				FragmentManager fragmentManager = getSupportFragmentManager();
+				FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+				fragmentTransaction.replace(R.id.flFragment.);
+				fragmentTransaction.commit();
+			}
+		});*/
+		
 		
 		drawerLayout = findViewById(R.id.drawerlayout);
 		navigationView = findViewById(R.id.navigation_view);

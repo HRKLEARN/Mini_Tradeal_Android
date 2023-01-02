@@ -1,4 +1,4 @@
-package tn.esprit.mini_tradeal_android.adapters;
+package tn.esprit.mini_tradeal_android.ui.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-import tn.esprit.mini_tradeal_android.entity.OnBoardingItem;
+import tn.esprit.mini_tradeal_android.models.OnBoardingItem;
 import tn.esprit.mini_tradeal_android.R;
 
 public class OnboardingAdapter extends RecyclerView.Adapter<OnboardingAdapter.OnboardingViewHolder> {

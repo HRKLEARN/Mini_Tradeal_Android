@@ -1,4 +1,4 @@
-package tn.esprit.mini_tradeal_android.dao;
+package tn.esprit.mini_tradeal_android.service.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -8,19 +8,19 @@ import androidx.room.Update;
 
 import java.util.List;
 
-import tn.esprit.mini_tradeal_android.entity.Product;
+import tn.esprit.mini_tradeal_android.models.Product;
 
 @Dao
 
 public interface ProductDao {
 	
-	@Query("SELECT * FROM product_table")
+	@Query("SELECT * FROM product")
 	List<Product> getAll();
 	
-	@Query("SELECT * FROM product_table WHERE uid IN (:ProductIds)")
+	@Query("SELECT * FROM product WHERE uid IN (:ProductIds)")
 	List<Product> loadAllByIds(int[] ProductIds);
 	
-	@Query("SELECT * FROM product_table WHERE product_name == :productName LIMIT 1")
+	@Query("SELECT * FROM product WHERE productName == :productName LIMIT 1")
 	Product findByName(String productName);
 	
 	@Insert

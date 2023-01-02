@@ -1,5 +1,6 @@
 package tn.esprit.mini_tradeal_android.ui.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,16 +13,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import tn.esprit.mini_tradeal_android.entity.Product;
+import tn.esprit.mini_tradeal_android.models.Product;
 import tn.esprit.mini_tradeal_android.R;
-import tn.esprit.mini_tradeal_android.adapters.ProductAdapter;
+import tn.esprit.mini_tradeal_android.ui.adapters.ProductAdapter;
+import tn.esprit.mini_tradeal_android.service.interfaces.ProductRecyclerViewInterface;
+import tn.esprit.mini_tradeal_android.ui.activities.ProductDetailsActivity;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements ProductRecyclerViewInterface {
 	
 	
 	// TODO: Rename parameter arguments, choose names that match
@@ -80,7 +83,7 @@ public class HomeFragment extends Fragment {
 		recyclerView.setHasFixedSize(true);
 		recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 		
-		initmDataProduct();
+		initDataProduct();
 		setUpProductAdapter();
 		
 		
@@ -88,11 +91,11 @@ public class HomeFragment extends Fragment {
 	}
 	
 	private void setUpProductAdapter() {
-		productAdapter = new ProductAdapter(mdata);
+		productAdapter = new ProductAdapter(mdata, this);
 		recyclerView.setAdapter(productAdapter);
 	}
 	
-	private void initmDataProduct() {
+	private void initDataProduct() {
 		mdata = new ArrayList<>();
 		mdata.add(new Product(R.drawable.photo1));
 		mdata.add(new Product(R.drawable.photo2));
@@ -102,4 +105,10 @@ public class HomeFragment extends Fragment {
 		
 	}
 	
+	@Override
+	public void onItemClick(int position, Product product) {
+		Intent intent = new Intent(getContext(), ProductDetailsActivity.class);
+		intent.putExtra("PRODUCT", String.valueOf(product));
+		startActivity(intent);
+	}
 }

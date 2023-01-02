@@ -16,8 +16,8 @@ import com.google.android.material.button.MaterialButton;
 import java.util.ArrayList;
 import java.util.List;
 
-import tn.esprit.mini_tradeal_android.entity.OnBoardingItem;
-import tn.esprit.mini_tradeal_android.adapters.OnboardingAdapter;
+import tn.esprit.mini_tradeal_android.models.OnBoardingItem;
+import tn.esprit.mini_tradeal_android.ui.adapters.OnboardingAdapter;
 import tn.esprit.mini_tradeal_android.R;
 
 public class IntroActivity extends AppCompatActivity {

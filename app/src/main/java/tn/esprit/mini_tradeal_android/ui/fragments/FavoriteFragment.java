@@ -6,17 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import tn.esprit.mini_tradeal_android.R;
-import tn.esprit.mini_tradeal_android.adapters.ProductAdapter;
+import tn.esprit.mini_tradeal_android.ui.adapters.ProductAdapter;
 import tn.esprit.mini_tradeal_android.database.AppDataBase;
-import tn.esprit.mini_tradeal_android.entity.Product;
+import tn.esprit.mini_tradeal_android.models.Product;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -81,23 +79,9 @@ public class FavoriteFragment extends Fragment {
 		
 		List<Product> productList = database.productDao().getAll();
 		
-		ProductAdapter productAdapter = new ProductAdapter(productList);
-		// Add the following lines to create RecyclerView
-		recyclerView = view.findViewById(R.id.rv_favorite);
-		recyclerView.setHasFixedSize(true);
-		recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-		
-		initmDataProduct();
-		
-		recyclerView.setAdapter(productAdapter);
-		
 		return view;
 	}
 	
-	private void setUpProductAdapter() {
-		productAdapter = new ProductAdapter(mdata);
-		recyclerView.setAdapter(productAdapter);
-	}
 	
 	private void initmDataProduct() {
 		mdata = new ArrayList<>();

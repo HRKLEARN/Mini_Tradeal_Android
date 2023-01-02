@@ -7,11 +7,11 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
-import tn.esprit.mini_tradeal_android.Converters;
-import tn.esprit.mini_tradeal_android.dao.UserDao;
-import tn.esprit.mini_tradeal_android.dao.ProductDao;
-import tn.esprit.mini_tradeal_android.entity.User;
-import tn.esprit.mini_tradeal_android.entity.Product;
+import tn.esprit.mini_tradeal_android.utils.Converters;
+import tn.esprit.mini_tradeal_android.service.dao.UserDao;
+import tn.esprit.mini_tradeal_android.service.dao.ProductDao;
+import tn.esprit.mini_tradeal_android.models.User;
+import tn.esprit.mini_tradeal_android.models.Product;
 
 @Database(entities = {User.class, Product.class}, version = 1, exportSchema = false)
 

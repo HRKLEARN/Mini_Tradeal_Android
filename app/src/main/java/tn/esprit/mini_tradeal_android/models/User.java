@@ -1,4 +1,4 @@
-package tn.esprit.mini_tradeal_android.entity;
+package tn.esprit.mini_tradeal_android.models;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
